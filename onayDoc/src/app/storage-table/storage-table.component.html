@@ -1,12 +1,16 @@
 <table>
   <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Email Address</th>
+    <th>Бренд</th>
+    <th>Артикуль</th>
+    <th>Наименование товара</th>
+    <th>Цена</th>
+    <th>Наличие</th>
   </tr>
-  <tr>
-    <td>Cell 4</td>
-    <td>Cell 5</td>
-    <td>Cell 6</td>
+  <tr *ngFor="let row of productList">
+    <td >{{ row.brand }}</td>
+    <td >{{ row.articule }}</td>
+    <td >{{ row.name }}</td>
+    <td >{{ row.price }}</td>
+    <td >{{ row.exists ? 'В наличии' : 'Нет в наличии'}}</td>
   </tr>
 </table>

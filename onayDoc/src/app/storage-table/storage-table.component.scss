@@ -1,0 +1,19 @@
+table {
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+tr { height: 48px;}
+
+th {
+  background-color: #F3F3F3;
+  width: 270px;
+
+  &:first-child {width: 212px;}
+  &:nth-child(2) {width: 280px;}
+  &:nth-child(3) {width: 560px;}
+}
+
+td {
+  color: black;
+}
