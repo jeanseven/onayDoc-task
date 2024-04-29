@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --scrollbar-thumb: #637381;
+  --scrollbar-hover: #737373;
+  --scrollbar-track: #efefef;
+
+  // * Background Icons
+  --search-icon: url('./assets/icons/search.svg');
+}
+
+.custom-scroll {
+  display: block;
+  width: 2em;
+  height: 2em;
+  overflow: auto;
+  margin: 0 auto;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background: var(--scrollbar-track);
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 2px;
+}

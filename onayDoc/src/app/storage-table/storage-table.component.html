@@ -1,16 +1,42 @@
-<table>
-  <tr>
-    <th>Бренд</th>
-    <th>Артикуль</th>
-    <th>Наименование товара</th>
-    <th>Цена</th>
-    <th>Наличие</th>
-  </tr>
-  <tr *ngFor="let row of productList">
-    <td >{{ row.brand }}</td>
-    <td >{{ row.articule }}</td>
-    <td >{{ row.name }}</td>
-    <td >{{ row.price }}</td>
-    <td >{{ row.exists ? 'В наличии' : 'Нет в наличии'}}</td>
-  </tr>
-</table>
+<div class="container custom-scroll">
+  <table>
+    <tr>
+      <th>
+        <div class="flex">
+          <span>Бренд</span>
+          <i class="search-icon"></i>
+        </div>
+      </th>
+      <th>
+        <div class="flex">
+          <span>Артикуль</span>
+          <i class="search-icon"></i>
+        </div>
+      </th>
+  <th>
+    <div class="flex">
+      <span>Наименование товара</span>
+      <i class="search-icon"></i>
+    </div>
+  </th>
+  <th>
+    <div class="flex">
+      <span>Цена</span>
+      <i class="search-icon"></i>
+    </div>
+  </th>
+
+      <th>Наличие</th>
+    </tr>
+    <tr *ngFor="let row of productList">
+      <td >{{ row.brand }}</td>
+      <td >{{ row.articule }}</td>
+      <td >{{ row.name }}</td>
+      <td >{{ row.price }}</td>
+      <td>
+        <span *ngIf="row.exists" class="blue">В наличии</span>
+        <span *ngIf="!row.exists">Нет в наличии</span>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,19 +1,54 @@
+.container {
+  width: 1200px;
+  height: 400px; //755px;
+}
 table {
   border: 1px solid white;
   border-radius: 4px;
+  width: 1610px;
+  overflow: scroll;
+
 }
 
-tr { height: 48px;}
+tr {
+  height: 48px;
+}
 
 th {
   background-color: #F3F3F3;
   width: 270px;
+  padding: 0 16px;
+  position: sticky;
+  top: 0;
 
-  &:first-child {width: 212px;}
+  &:first-child {width: 212px; left: 0; z-index: 1}
   &:nth-child(2) {width: 280px;}
   &:nth-child(3) {width: 560px;}
 }
 
 td {
-  color: black;
+  width: 270px;
+  background-color: #fff;
+  padding-left: 16px;
+
+
+  &:first-child {
+    width: 212px;
+    position: sticky;
+    left: 0;
+  }
+  &:nth-child(2) {width: 280px;}
+  &:nth-child(3) {width: 560px;}
 }
+
+.blue { color: blue}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-icon {
+  width: 18px;
+  background: var(--search-icon);
+}
+
